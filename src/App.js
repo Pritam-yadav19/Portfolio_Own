@@ -6,6 +6,7 @@ import jss from './logos/js.png';
 import reacts from './logos/react.png';
 import gits from './logos/github.png';
 import links from './logos/linked.png';
+import ecarts from './logos/ecart.png'
 
 const center = {
   display: "flex",
@@ -64,6 +65,19 @@ function App() {
           width:60px;
           height:40px;
           
+        }
+        .action-button {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 10px 15px;
+          margin: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        
+        .action-button:hover {
+          background-color: #0056b3;
         }
       `}</style>
       <header style={{position:"fixed", zIndex:"100", width:"100%"}}>
@@ -146,41 +160,68 @@ function App() {
               </div>
             </div>
             <div style={{...center}}>
-              <div className="container_about">
-                <div>
-                  <p style={{
-                    fontSize:"1.5em",
-                    fontWeight:"bold",
-                    color:"blue",
-                    margin:"0px"
-                  }}>ABOUT ME</p>
-                </div>
-                <div>
-                  <p style={{
-                    fontSize:"1.5em",
-                    fontWeight:"bold",
-                    margin:"0px"
-                  }}>A dedicated Front-End React Developer.</p>
-                </div>
-                <div>
-                  <p style={{
-                    color:"#9A9A9A",
-                    margin:"0px"
-                  }}>Hello, I'm Pritam Yadav, a junior React Frontend Developer dedicated to crafting responsive and visually appealing user interfaces. Proficient in creating seamless experiences, I specialize in clean, maintainable code while staying up-to-date with the latest technologies. With a keen eye for design and a problem-solving mindset, I thrive in collaborative environments. Eager to contribute my skills and passion to innovative projects, I'm excited about the opportunity to create impactful web applications. Let's connect and explore the possibilities!
-                  </p>
-                </div>
-              
-              </div>
-              
+              <div style={{...center,
+                background:"#498AA9",
+                height:"60%"
+              }}>
+                <div className="container_about" style={{
+                  background:"white",
+                  padding:"10px",
+                  height:"70%",
+                  border:"10px solid #F57B7D"
+                }}>
+                  <div>
+                    <p style={{
+                      fontSize:"1.5em",
+                      fontWeight:"bold",
+                      color:"blue",
+                      margin:"0px"
+                    }}>ABOUT ME</p>
+                  </div>
+                  <div>
+                    <p style={{
+                      fontSize:"1.5em",
+                      fontWeight:"bold",
+                      margin:"0px"
+                    }}>A dedicated Front-End React Developer.</p>
+                  </div>
+                  <div>
+                    <p style={{
+                      color:"#9A9A9A",
+                      margin:"0px"
+                    }}>Hello, I'm Pritam Yadav, a junior React Frontend Developer dedicated to crafting responsive and visually appealing user interfaces. Proficient in creating seamless experiences, I specialize in clean, maintainable code while staying up-to-date with the latest technologies. With a keen eye for design and a problem-solving mindset, I thrive in collaborative environments. Eager to contribute my skills and passion to innovative projects, I'm excited about the opportunity to create impactful web applications. Let's connect and explore the possibilities!
+                    </p>
+                  </div>
+                </div>  
+              </div> 
             </div>
             <div style={{...center}}>
               <div>
-                <p style={{
+                {/* <p style={{
                     fontSize:"2em",
                     fontWeight:"bold",
                     color:"black",
                     margin:"0px"
-                  }}>PROJECTS</p>
+                  }}>PROJECTS</p> */}
+                                  <div style={{ fontFamily: 'Arial, sans-serif' }}>
+                        <header style={{ backgroundColor: '#333', color: '#fff', textAlign: 'center', padding: '20px' }}>
+                          <h1>Web Development Showcase</h1>
+                        </header>
+                        <section style={{ display: 'flex', justifyContent: 'space-around', padding: '20px' }}>
+                          <div style={{ width: '300px', margin: '20px', padding: '15px', border: '1px solid #ddd', borderRadius: '5px', textAlign: 'center' }}>
+                            <img src={ecarts} alt="Project 1" style={{ maxWidth: '100%', height: 'auto', borderRadius: '5px' }} />
+                            <h2>ECART</h2>
+                            <p><h4>React/Redux</h4>Description of Project 1.</p>
+                            <div>
+                              <button className="action-button" onClick={() => window.open('https://github.com/Pritam-yadav19/Cart-React', '_blank')}>View Code</button>
+                              <button className="action-button" onClick={() => window.open('https://pritam-yadav19.github.io/Cart-React/', '_blank')}>View Live</button>
+                            </div>
+                          </div>
+                          
+                          
+                        </section>
+                        
+                      </div>
               </div>
             </div>
             
