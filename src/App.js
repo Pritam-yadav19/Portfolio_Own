@@ -220,7 +220,7 @@ function App() {
                           <div style={{ width: '300px', margin: '20px', padding: '15px', border: '1px solid #ddd', borderRadius: '5px', textAlign: 'center' }}>
                             <img src={ecarts} alt="Project 1" style={{ maxWidth: '100%', height: 'auto', borderRadius: '5px' }} />
                             <h2>ECART</h2>
-                            <p><h4>React/Redux</h4>Description of Project 1.</p>
+                            <p><h4>React/Redux</h4>A React app for seamless online shopping. Users can add, remove items from their cart, and manage addresses. The app includes user registration, login, and a clean interface for a user-friendly experience.</p>
                             <div>
                               <button className="action-button" onClick={() => window.open('https://github.com/Pritam-yadav19/Cart-React', '_blank')}>View Code</button>
                               <button className="action-button" onClick={() => window.open('https://pritam-yadav19.github.io/Cart-React/', '_blank')}>View Live</button>
