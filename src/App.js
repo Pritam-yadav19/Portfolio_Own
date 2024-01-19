@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import myImage from './pic.jpeg';
 import htmls from './logos/html.png';
 import csss from './logos/css.png';
 import jss from './logos/js.png';
+import ups from './logos/up.png';
 import reacts from './logos/react.png';
 import gits from './logos/github.png';
 import links from './logos/linked.png';
@@ -16,6 +17,27 @@ const center = {
   height:"100vh"
 }
 function App() {
+
+  const [Show, setShow] = useState(false);
+  useEffect(()=>{
+    const handlescroll = (event) =>{
+      if(window.scrollY>300){
+        setShow(true);
+      }
+      else{
+        setShow(false);;
+      }
+    }
+      window.addEventListener("scroll",handlescroll);
+      return () =>{           //return is added so when comp is unmounted, it deletes the event to save memory
+        window.removeEventListener("scroll",handlescroll);
+      }
+    
+  },[]);
+
+  const scrollTop = (elmRef) => {
+    window.scrollTo({top: 0, behavior:"smooth" })
+  }
 
   return (
     <div>   
@@ -119,6 +141,8 @@ function App() {
         </ul> */}
 
       </header>
+
+      
             <div style={{...center}}>
               <div className="container"
               >
@@ -168,6 +192,9 @@ function App() {
                 </div>
               </div>
             </div>
+
+
+
             <div style={{...center}}>
               <div style={{...center,
                 background:"#498AA9",
@@ -204,6 +231,8 @@ function App() {
                 </div>  
               </div> 
             </div>
+
+
             <div style={{...center}}>
               <div>
                 {/* <p style={{
@@ -233,7 +262,13 @@ function App() {
                       </div>
               </div>
             </div>
-            
+            <div style={{
+              position:"fixed",
+              right:"15px",
+              bottom:"20px"
+            }}>
+              {Show && <button onClick={scrollTop}><img style={{width:"30px"}}src={ups} alt="up"/></button>}
+            </div>
     </div>
   );
 }
