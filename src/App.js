@@ -46,7 +46,16 @@ function App() {
         }
         @media only screen and (max-width:600px){
           .container{
-            width:100%
+            width:100%;
+            grid-template-columns: 1fr;
+          }
+          .container_about {
+            width: 100%;
+            grid-template-rows: auto auto auto; // Adjust the layout for smaller screens
+          }
+      
+          .images {
+            border-radius: 50%; // Adjust the border-radius for smaller screens
           }
         }
         .images {
